@@ -1,113 +1,195 @@
-# django-app
+# django‑allauth‑xui
 
-[![CI](https://github.com/youzarsiph/django-app/actions/workflows/ci.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/ci.yml)
-[![CD](https://github.com/youzarsiph/django-app/actions/workflows/cd.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/cd.yml)
-[![Code Style: Black](https://github.com/youzarsiph/django-app/actions/workflows/black.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/black.yml)
-[![Code Linting: Ruff](https://github.com/youzarsiph/django-app/actions/workflows/ruff.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/ruff.yml)
-[![Code Testing](https://github.com/youzarsiph/django-app/actions/workflows/tests.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/tests.yml)
-[![Docker Image](https://github.com/youzarsiph/django-app/actions/workflows/docker-image.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/docker-image.yml)
-[![Docker Publish](https://github.com/youzarsiph/django-app/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/docker-publish.yml)
-[![PyPI - Version](https://img.shields.io/pypi/v/django-app?logo=pypi&logoColor=white)](https://pypi.org/project/django-app/)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-app?logo=python&logoColor=white)](https://pypi.org/project/django-app/)
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/django-app?logo=pypi&logoColor=white)](https://pypi.org/project/django-app/)
-[![PyPI - License](https://img.shields.io/pypi/l/django-app?logo=pypi&logoColor=white)](https://pypi.org/project/django-app/)
+[![CI](https://github.com/youzarsiph/django-allauth-xui/actions/workflows/ci.yml/badge.svg)](https://github.com/youzarsiph/django-allauth-xui/actions/workflows/ci.yml)
+[![CD](https://github.com/youzarsiph/django-allauth-xui/actions/workflows/cd.yml/badge.svg)](https://github.com/youzarsiph/django-allauth-xui/actions/workflows/cd.yml)
+[![Code Style: Black](https://github.com/youzarsiph/django-allauth-xui/actions/workflows/black.yml/badge.svg)](https://github.com/youzarsiph/django-allauth-xui/actions/workflows/black.yml)
+[![Code Linting: Ruff](https://github.com/youzarsiph/django-allauth-xui/actions/workflows/ruff.yml/badge.svg)](https://github.com/youzarsiph/django-allauth-xui/actions/workflows/ruff.yml)
+[![PyPI - Version](https://img.shields.io/pypi/v/django-allauth-xui?logo=pypi&logoColor=white)](https://pypi.org/project/django-allauth-xui/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-allauth-xui?logo=python&logoColor=white)](https://pypi.org/project/django-allauth-xui/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/django-allauth-xui?logo=pypi&logoColor=white)](https://pypi.org/project/django-allauth-xui/)
+[![PyPI - License](https://img.shields.io/pypi/l/django-allauth-xui?logo=pypi&logoColor=white)](https://pypi.org/project/django-allauth-xui/)
+
+---
 
 ## Overview
 
-This repository serves as a comprehensive Python application template designed to facilitate robust development practices. Leveraging modern tools and methodologies, this template is tailored for developers aiming to build maintainable, scalable applications. It emphasizes dependency management, code quality, and seamless integration with DevOps pipelines.
+**django‑allauth‑xui (XUI)** provides a modern, responsive UI layer for [django‑allauth](https://docs.allauth.org/en/latest/introduction/index.html), styled with **Tailwind CSS** and **daisyUI**.  
+
+It’s designed to give authentication flows a clean, contemporary look out of the box, while remaining fully customizable for your brand and product.
+
+---
 
 ## Key Features
 
-- **CI/CD Pipelines**: Automated using GitHub Actions to ensure consistent and reliable deployment processes.
-- **Dependency Management**: Powered by Poetry, a sophisticated tool for managing project dependencies with precision and reliability.
-- **Code Formatting**: Automatically formatted with Black to maintain a consistent and readable codebase.
-- **Code Linting**: Utilizes Ruff to identify and address potential issues early, enhancing code quality and maintainability.
-- **Code Testing**: Utilizes Django to run tests.
-- **Configuration Files**: Includes `.gitignore`, `pyproject.toml`, and other essential configuration files to streamline setup.
+- **Modern UI** — TailwindCSS + daisyUI styling  
+- **35+ Built‑in Themes** — all daisyUI themes included  
+- **Custom Themes** — create and apply your own in minutes  
+- **CI/CD Ready** — GitHub Actions pipelines for testing and deployment  
 
-## Quick Start Guide
+---
 
-To initiate a new project using this template, follow these steps:
+## Screenshots
 
-1. **Create a Repository from Template**:
-   - Navigate to the repository on GitHub.
-   - Click on the `Use this template` button.
-   - Customize the new repository with your project details.
+![Profile](https://github.com/user-attachments/assets/3014eadd-dcde-48ce-a18d-4424a07efdae)
+![Login](https://github.com/user-attachments/assets/1722486c-98f1-4f43-bf96-720589aa968c)
+![Sign up](https://github.com/user-attachments/assets/3e0ffd63-651a-47cc-8e7f-cee5381669c9)
+![Email](https://github.com/user-attachments/assets/71549ddd-5066-489e-aa4e-6e0128f89ba2)
+![Password](https://github.com/user-attachments/assets/9b84612f-281e-4f74-8361-a4cbf38ab177)
+![2FA](https://github.com/user-attachments/assets/6a79fd57-ac5e-4d62-bbb6-9e89519f4583)
 
-2. **Clone Your New Repository**:
+---
 
-   ```bash
-   git clone https://github.com/your-username/your-new-project.git
-   cd your-new-project
-   ```
+## Quick Start
 
-3. **Set Up the Environment**:
-   - Install Poetry if not already installed:
+First, install the package (after setting up `django‑allauth`):
 
-     ```bash
-     pip install poetry
-     ```
+```bash
+pip install django-allauth-xui
+```
 
-   - Install the project dependencies:
+Add to `INSTALLED_APPS` (order matters):
 
-     ```bash
-     poetry install
-     ```
+```python
+INSTALLED_APPS = [
+    ...
+    "allauth_xui",
+    "allauth",
+    "allauth.account",
+    ...
+]
+```
 
-4. **Create a new Django project**:
+Include the URLs:
 
-   ```bash
-   poetry run python -m django startproject core
-   mv core/* .
-   ```
+```python
+from django.urls import path, include
 
-5. **Configure the app**:
+urlpatterns = [
+    ...
+    path("accounts/", include("allauth.urls")),
+    path("accounts/", include("allauth_xui.urls")),
+    ...
+]
+```
 
-   Open `core/settings.py`:
+---
 
-   ```python
-   # Add the following line
-   AUTH_USER_MODEL = "users.User"
+## Customization
 
-   # Application definition
-   INSTALLED_APPS = [
-      # Add the app to INSTALLED_APPS
-      "app",
-      "app.books",
-      "app.users",
-      # Default apps
-      ...
-   ]
-   ```
+XUI is designed to be extended. To override layouts:
 
-   Open `core/urls.py`:
+```bash
+mkdir -p your_app/templates/allauth/layouts
+touch your_app/templates/allauth/layouts/base.html
+```
 
-   ```python
-   # Import `include`
-   from django.urls import path, include
-   
-   
-   urlpatterns = [
-      # Include `app.urls`
-      path("", include("app.urls")),
-      ...
-   ]
-   ```
+Then extend the base template:
 
-6. **Run the Application**:
+```html
+{% extends "allauth/layouts/base.html" %}
+```
 
-   ```bash
-   poetry run python manage.py runserver
-   ```
+### Add Your Brand
+
+```html
+{% extends "allauth/layouts/base.html" %}{% load i18n static %}
+
+<!-- Brand in Navbar -->
+{% block branding %}
+<li
+  class="tooltip tooltip-right rtl:tooltip-left tooltip-primary md:hidden"
+  data-tip="{% trans 'YOUR_BRAND' %}"
+>
+  <a
+    href="{% url 'account_profile' %}"
+    class="btn btn-square btn-primary lg:btn-lg 2xl:btn-lg"
+  >
+    <img
+      alt="{% trans 'YOUR_BRAND' %}"
+      src="{% static 'path/to/your/logo.png' %}"
+      class="size-6 lg:size-8 2xl:size-10"
+    />
+    <span class="sr-only">{% trans 'YOUR_BRAND' %}</span>
+  </a>
+</li>
+{% endblock %}
+
+<!-- Brand in Drawer Menu -->
+{% block drawer_branding %}
+<li
+  class="tooltip tooltip-right rtl:tooltip-left tooltip-primary"
+  data-tip="{% trans 'YOUR_BRAND' %}"
+>
+  <a
+    href="{% url 'account_profile' %}"
+    class="btn btn-square btn-primary lg:btn-lg 2xl:btn-lg"
+  >
+    <img
+      alt="{% trans 'YOUR_BRAND' %}"
+      src="{% static 'path/to/your/logo.png' %}"
+      class="size-6 lg:size-8 2xl:size-10"
+    />
+    <span class="sr-only">{% trans 'YOUR_BRAND' %}</span>
+  </a>
+</li>
+{% endblock %}
+
+<!-- Links in sidebar -->
+{% block user_links %}
+<li
+  class="is-drawer-close:tooltip is-drawer-close:tooltip-right rtl:is-drawer-close:tooltip-left"
+  data-tip="{% trans 'Home' %}"
+>
+  <a href="https://your.domain.com/">
+    <i data-lucide="home" class="size-4 lg:size-6"></i>
+    <span class="is-drawer-close:sr-only">
+      {% trans 'Home' %}
+    </span>
+  </a>
+</li>
+...
+{% endblock %}
+```
+
+### Themes
+
+- **Switch themes:**
+
+```html
+{% block theme %}silk{% endblock %}
+{% block toggle_theme %}luxury{% endblock %}
+```
+
+- **Remove theme controls:**
+
+```html
+{% block theme_selector %}{% endblock %}
+{% block theme_toggle %}{% endblock %}
+```
+
+- **Create your own theme:**  
+  Use [daisyUI’s Theme Generator](https://daisyui.com/theme-generator/), add the CSS to your stylesheet, and include it in your template:
+
+```html
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'your_app/css/output.css' %}" />
+{% endblock %}
+```
+
+---
 
 ## Contributing
 
-We warmly welcome contributions from the community. Please refer to our [CONTRIBUTING](CONTRIBUTING.md) guide for detailed instructions on how to contribute effectively. Your feedback and participation are essential for the continued improvement of this template.
+Contributions are welcome! Please see the [CONTRIBUTING](CONTRIBUTING.md) guide for details. Feedback, issues, and pull requests help shape the project.
+
+---
 
 ## Support
 
-For inquiries or support, please open an issue or join the discussion in the [GitHub Discussions](https://github.com/youzarsiph/django-app/discussions) section to engage with the community.
+For questions or support, open an issue or join the conversation in [GitHub Discussions](https://github.com/youzarsiph/django-allauth-xui/discussions).
 
-## Licensing
+---
 
-This project is licensed under the MIT License. A detailed copy of the terms can be found in the [LICENSE](LICENSE) file.
+## License
+
+Licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

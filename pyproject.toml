@@ -1,24 +1,24 @@
 [tool.poetry]
-name = "django-app"
+name = "django-allauth-xui"
 version = "0.1.0"
-description = "A Django app template with dependency management and DevOps best practices."
+description = "Modern UI for django-allauth"
 authors = ["Yousef Abu Shanab <josephyousef249@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{ include = "app" }]
-homepage = "https://github.com/youzarsiph/django-app"
-repository = "https://github.com/youzarsiph/django-app"
-documentation = "https://github.com/youzarsiph/django-app"
+packages = [{ include = "allauth_xui" }]
+homepage = "https://github.com/youzarsiph/django-allauth-xui"
+repository = "https://github.com/youzarsiph/django-allauth-xui"
+documentation = "https://github.com/youzarsiph/django-allauth-xui"
 
 [tool.poetry.dependencies]
-python = "^3.11"
-django = "^5.1.5"
-django-debug-toolbar = "^5.0.1"
-
+python = ">=3.11"
+django = ">=5.2.7"
+django-allauth = ">=65.12.1"
 
 [tool.poetry.group.dev.dependencies]
-ruff = "^0.9.2"
-black = "^24.10.0"
+django-debug-toolbar = ">=6.0.0"
+ruff = ">=0.14.2"
+black = ">=25.9.0"
 
 [build-system]
 requires = ["poetry-core"]
