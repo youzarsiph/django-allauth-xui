@@ -17,6 +17,16 @@
 
 It’s designed to give authentication flows a clean, contemporary look out of the box, while remaining fully customizable for your brand and product.
 
+## Why XUI?
+
+XUI stands for a flexible, modern UI layer you can shape to your product. The “X” is intentional — a variable you can define.
+
+- **Modern:** Tailwind CSS and daisyUI deliver contemporary, accessible patterns out of the box.
+- **Professional:** Clean layouts, sensible defaults, and production‑ready flows that fit real teams.
+- **Customizable:** Override templates, extend blocks, and adapt components to your brand.
+- **Theme‑able:** Switch between 35+ built‑in themes or roll your own in minutes.
+- **Variable (“X”):** X is yours to define — from styling and UX to integrations and workflows.
+
 ---
 
 ## Key Features
@@ -177,6 +187,35 @@ Then extend the base template:
 ```
 
 ---
+
+### Available blocks to extend
+
+These template blocks let you tailor layouts, branding, and theming without rewriting core templates. Override only what you need.
+
+- **theme:** Primary theme name like `light`.
+- **head:** HTML head.
+- **head_title:** Content for the `<title>` tag.
+- **extra_head:** Extra content for `<head>`.
+- **drawer_content:** Drawer content.
+- **navbar_start:** Content in start of navbar.
+- **branding:** Branding in navbar.
+- **navbar_start:** Content in start of navbar.
+- **navbar_center:** Content in center of navbar.
+- **navbar_end:** Content in end of navbar.
+- **theme_selector:** Theme select dropdown.
+- **theme_toggle:** Theme toggle button.
+- **toggle_theme:** Secondary theme name `dark`.
+- **breadcrumbs:** Breadcrumb navigation.
+- **content:** Sidebar content (main content).
+- **sidebar_start:** Content in start of sidebar.
+- **sidebar_end:** Content in end of sidebar.
+- **drawer_header_start:** Content in start of drawer header.
+- **drawer_branding:** Branding in drawer header.
+- **drawer_header_end:** Content in end of drawer header.
+- **drawer_start:** Content in start of drawer.
+- **drawer_center:** Content in center of drawer.
+- **drawer_end:** Content in end of drawer.
+- **extra_body:** Extra body tags like script.
 
 ## Contributing
 

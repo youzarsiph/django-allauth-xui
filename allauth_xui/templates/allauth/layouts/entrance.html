@@ -1,17 +1,19 @@
 {% extends "allauth/layouts/base.html" %}{% load i18n %}
 
 <!---->
-{% block inner %}
+{% block drawer_content %}
 <div class="relative size-full">
   <header class="absolute inset-x-0 top-0 z-10 backdrop-blur-3xl">
     <nav class="navbar p-4">
       <ul class="navbar-start gap-4">
+        {% block navbar_start %}{% endblock %}
+
         <li
           class="tooltip tooltip-right rtl:tooltip-left tooltip-primary lg:hidden"
           data-tip="{% trans 'Open drawer' %}"
         >
           <label
-            for="sidebar"
+            for="drawer"
             aria-label="{% trans 'close sidebar' %}"
             class="btn btn-sm lg:btn-md 2xl:btn-lg btn-square btn-ghost"
           >
@@ -45,6 +47,8 @@
         </li>
         {% endblock %}
       </ul>
+
+      {% block navbar_center %}{% endblock %}
 
       <ul class="navbar-end gap-4">
         {% block navbar_end %}{% endblock %}

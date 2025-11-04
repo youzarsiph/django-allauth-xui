@@ -32,12 +32,12 @@
     <div
       class="drawer h-dvh bg-base-100 overflow-hidden md:rounded-box md:drawer-open md:max-h-[calc(100dvh-0.5rem)] lg:max-h-[calc(100dvh-1rem)]"
     >
-      <input id="main-drawer" type="checkbox" class="drawer-toggle" />
+      <input id="drawer" type="checkbox" class="drawer-toggle" />
 
       <section
         class="drawer-content size-full max-h-dvh md:max-h-[calc(100dvh-0.5rem)] lg:max-h-[calc(100dvh-1rem)]"
       >
-        {% block inner %}
+        {% block drawer_content %}
         <div
           class="drawer max-h-dvh md:max-h-[calc(100dvh-0.5rem)] lg:max-h-[calc(100dvh-1rem)] lg:drawer-open"
         >
@@ -50,6 +50,8 @@
               <header class="absolute inset-x-0 top-0 z-10 backdrop-blur-3xl">
                 <nav class="navbar p-4">
                   <ul class="navbar-start gap-4">
+                    {% block navbar_start %}{% endblock %}
+
                     <li
                       class="tooltip tooltip-right rtl:tooltip-left tooltip-primary lg:hidden"
                       data-tip="{% trans 'Open drawer' %}"
@@ -89,6 +91,8 @@
                     </li>
                     {% endblock %}
                   </ul>
+
+                  {% block navbar_center %}{% endblock %}
 
                   <ul class="navbar-end gap-4">
                     {% block navbar_end %}{% endblock %}
@@ -525,7 +529,7 @@
                     data-tip="{% trans 'Open drawer' %}"
                   >
                     <label
-                      for="main-drawer"
+                      for="drawer"
                       aria-label="{% trans 'close sidebar' %}"
                       class="btn btn-sm lg:btn-md 2xl:btn-lg btn-square btn-ghost"
                     >
@@ -612,7 +616,7 @@
                   <li>
                     <a href="{{ mfa_url_ }}">
                       <i data-lucide="fingerprint" class="size-4 lg:size-6"></i>
-                      <span>{% trans 'Two Factor Authentication' %}</span>
+                      <span>{% trans 'Two-Factor Authentication' %}</span>
                     </a>
                   </li>
                   {% endif %}
@@ -629,12 +633,9 @@
                   {% endif %}
                   <!---->
                   {% endif %}
-
-                  <!---->
-                  {% block sidebar_end %}{% endblock %}
                 </ul>
 
-                {% block sidebar_bottom %}{% endblock %}
+                {% block sidebar_end %}{% endblock %}
               </div>
             </div>
           </section>
@@ -646,7 +647,7 @@
         class="drawer-side is-drawer-close:overflow-visible z-50 md:z-40 lg:z-50 max-h-dvh md:max-h-[calc(100dvh-0.5rem)] lg:max-h-[calc(100dvh-1rem)]"
       >
         <label
-          for="main-drawer"
+          for="drawer"
           aria-label="close sidebar"
           class="drawer-overlay"
         ></label>
@@ -655,6 +656,9 @@
           class="is-drawer-close:w-18 is-drawer-close:lg:w-20 is-drawer-open:w-full md:is-drawer-open:w-sm bg-base-100 border-base-300 flex h-full flex-col items-center gap-4 p-4 md:border-r lg:border-r-0 md:max-h-[calc(100dvh-0.5rem)] lg:max-h-[calc(100dvh-1rem)]"
         >
           <header class="flex w-full items-center justify-between gap-4">
+            {% block drawer_header_start %}{% endblock %}
+
+            <!---->
             {% block drawer_branding %}
             <div
               class="tooltip tooltip-right rtl:tooltip-left tooltip-primary"
@@ -680,14 +684,14 @@
             {% endblock %}
 
             <div class="is-drawer-close:hidden flex items-center gap-4">
-              {% block drawer_right %}{% endblock %}
+              {% block drawer_header_end %}{% endblock %}
 
               <div
                 class="tooltip tooltip-left rtl:tooltip-right"
                 data-tip="{% trans 'Close' %}"
               >
                 <label
-                  for="main-drawer"
+                  for="drawer"
                   class="btn btn-sm lg:btn-md 2xl:btn-lg btn-square btn-ghost"
                 >
                   <i data-lucide="x" class="size-4 lg:size-6"></i>
@@ -698,7 +702,10 @@
           </header>
 
           <ul class="menu w-full grow gap-2 p-0">
-            {% block user_links %}
+            {% block drawer_start %}{% endblock %}
+
+            <!---->
+            {% block drawer_center %}
             <li
               class="is-drawer-close:tooltip is-drawer-close:tooltip-right rtl:is-drawer-close:tooltip-left"
               data-tip="{% trans 'Home' %}"
@@ -758,6 +765,9 @@
           </ul>
 
           <ul class="menu w-full gap-2 p-0">
+            {% block drawer_end %}{% endblock %}
+
+            <!---->
             {% if request.user.is_authenticated %}
             <!---->
             {% url 'account_logout' as logout_url_ %}
@@ -765,12 +775,12 @@
             {% if logout_url_ %}
             <li
               class="is-drawer-close:tooltip is-drawer-close:tooltip-right rtl:is-drawer-close:tooltip-left"
-              data-tip="{% trans 'Logout' %}"
+              data-tip="{% trans 'Log out' %}"
             >
               <a href="{{ logout_url_ }}">
                 <i data-lucide="log-out" class="size-4 lg:size-6"></i>
                 <span class="is-drawer-close:sr-only">
-                  {% trans 'Logout' %}
+                  {% trans 'Log out' %}
                 </span>
               </a>
             </li>
@@ -816,7 +826,7 @@
               class="is-drawer-close:tooltip is-drawer-close:tooltip-right rtl:is-drawer-close:tooltip-left"
               data-tip="{% trans 'Open drawer' %}"
             >
-              <label for="main-drawer" class="drawer-button">
+              <label for="drawer" class="drawer-button">
                 <i
                   data-lucide="sidebar-open"
                   class="is-drawer-open:hidden size-4 lg:size-6 rtl:rotate-180"

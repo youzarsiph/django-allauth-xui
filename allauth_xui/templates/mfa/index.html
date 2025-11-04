@@ -63,9 +63,9 @@
 
         {% if authenticators.webauthn|length %}
         <p>
-          {% blocktrans count count=authenticators.webauthn|length trimmed %}You
-          have added {{ count }} security key.{% plural %}You have added {{
-          count }} security keys.{% endblocktrans %}
+          {% blocktrans count count=authenticators.webauthn|length trimmed %}You have
+          added {{ count }} security key.{% plural %} You have added {{ count }}
+          security keys.{% endblocktrans %}
         </p>
 
         <a
@@ -106,8 +106,8 @@
 
         {% if authenticators.recovery_codes %}
         <p>
-          {% blocktrans count unused_count=unused_count trimmed %}
-          There is {{ unused_count }} out of {{ total_count }} recovery codes available.
+          {% blocktrans count unused_count=unused_count trimmed %}There is
+          {{ unused_count }} out of {{ total_count }} recovery codes available.
           {% plural %}There are {{ unused_count }} out of {{ total_count }}
           recovery codes available.{% endblocktrans %}
         </p>
